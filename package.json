@@ -1,0 +1,18 @@
+{
+  "name": "vanta-company-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "موقع تعريفي وطلب آلي لشركة Vanta للطباعة والحقائب الدعائية.",
+  "scripts": {
+    "test": "node --test",
+    "serve": "python3 -m http.server 4173 --bind 0.0.0.0"
+  },
+  "keywords": [
+    "vanta",
+    "printing",
+    "bags",
+    "google-sheets",
+    "apps-script"
+  ],
+  "license": "UNLICENSED"
+}
