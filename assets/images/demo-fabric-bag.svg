@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Vanta fabric tote demo</title>
+  <desc id="desc">صورة تجريبية لحقيبة قماش دعائية تحمل هوية Vanta.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#09065f"/>
+      <stop offset="0.58" stop-color="#141083"/>
+      <stop offset="1" stop-color="#030226"/>
+    </linearGradient>
+    <pattern id="cloth" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M0 14h28M14 0v28" stroke="#09065f" stroke-opacity="0.055" stroke-width="2"/>
+    </pattern>
+    <linearGradient id="bag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dfe6ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="44" stdDeviation="38" flood-color="#000000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="250" cy="180" r="230" fill="#ffffff" opacity="0.12"/>
+  <circle cx="970" cy="170" r="320" fill="#6f7cff" opacity="0.18"/>
+  <path d="M0 720C225 610 400 768 614 676c220-95 350-188 586-92v316H0Z" fill="#ffffff" opacity="0.08"/>
+  <ellipse cx="600" cy="780" rx="338" ry="66" fill="#000" opacity="0.22"/>
+  <g filter="url(#shadow)">
+    <path d="M360 236h480l-52 570H412L360 236Z" fill="url(#bag)"/>
+    <path d="M360 236h480l-52 570H412L360 236Z" fill="url(#cloth)"/>
+    <path d="M455 236c10-102 61-162 145-162s135 60 145 162" fill="none" stroke="#ffffff" stroke-width="34" stroke-linecap="round" opacity="0.95"/>
+    <path d="M485 237c9-73 47-113 115-113s106 40 115 113" fill="none" stroke="#09065f" stroke-width="9" stroke-linecap="round" opacity="0.14"/>
+    <path d="M410 306h380" stroke="#09065f" stroke-width="6" opacity="0.08"/>
+    <rect x="468" y="365" width="264" height="220" rx="38" fill="#09065f"/>
+    <path d="M528 420h42l40 82 69-82h50L626 582l-79-162Z" fill="#fff"/>
+    <path d="M628 488l51-68h56l-21 29h-26l-60 80-22-34 20-27 11 21Z" fill="#fff" opacity="0.96"/>
+    <text x="600" y="660" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="11" fill="#09065f">VANTA</text>
+  </g>
+</svg>
