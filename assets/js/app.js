@@ -236,6 +236,8 @@
     const elements = Array.from(document.querySelectorAll("[data-animate]"));
     if (!elements.length) return;
 
+    document.documentElement.classList.add("motion-ready");
+
     if (!("IntersectionObserver" in window)) {
       elements.forEach((element) => element.classList.add("is-visible"));
       return;

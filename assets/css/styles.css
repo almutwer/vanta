@@ -686,14 +686,14 @@ textarea:focus {
   }
 }
 
-.js [data-animate] {
+.motion-ready [data-animate] {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 620ms ease, transform 620ms ease;
   transition-delay: var(--delay, 0ms);
 }
 
-.js [data-animate].is-visible {
+.motion-ready [data-animate].is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -711,23 +711,23 @@ textarea:focus {
     transition-duration: 0.01ms !important;
   }
 
-  .js [data-animate] {
+  .motion-ready [data-animate] {
     opacity: 1;
     transform: none;
   }
 }
 
-.js [data-animate].is-visible.service-card:hover {
+.motion-ready [data-animate].is-visible.service-card:hover {
   transform: translateY(-4px);
 }
 
-.js [data-animate].is-visible.button:hover {
+.motion-ready [data-animate].is-visible.button:hover {
   transform: translateY(-2px);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .js [data-animate].is-visible.service-card:hover,
-  .js [data-animate].is-visible.button:hover {
+  .motion-ready [data-animate].is-visible.service-card:hover,
+  .motion-ready [data-animate].is-visible.button:hover {
     transform: none;
   }
 }
