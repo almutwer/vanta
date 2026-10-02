@@ -19,6 +19,7 @@
   const statusBox = document.querySelector("[data-form-status]");
   const endpointStatus = document.querySelector("[data-endpoint-status]");
   const yearNode = document.querySelector("[data-current-year]");
+  const scrollProgress = document.querySelector("[data-scroll-progress]");
 
   if (yearNode) yearNode.textContent = new Date().getFullYear();
 
@@ -257,7 +258,30 @@
 
   window.VantaAnimations = { refresh: initAnimations };
 
+  function initVisualEffects() {
+    if (scrollProgress) {
+      const updateProgress = () => {
+        const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = documentHeight > 0 ? window.scrollY / documentHeight : 0;
+        scrollProgress.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
+      };
+      updateProgress();
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      window.addEventListener("resize", updateProgress);
+    }
+
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    window.addEventListener("pointermove", (event) => {
+      const x = Math.round((event.clientX / window.innerWidth) * 100);
+      const y = Math.round((event.clientY / window.innerHeight) * 100);
+      document.body.style.setProperty("--pointer-x", `${x}%`);
+      document.body.style.setProperty("--pointer-y", `${y}%`);
+    }, { passive: true });
+  }
+
   function init() {
+    initVisualEffects();
     initAnimations();
     if (!orderForm || !pricing) return;
     populateOptions();
